@@ -1,0 +1,22 @@
+{
+  "name": "challenge_numbers",
+  "version": "1.0.0",
+  "description": "this is a example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wackGarcia/challenge_numbers.git"
+  },
+  "author": "Abel Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wackGarcia/challenge_numbers/issues"
+  },
+  "homepage": "https://github.com/wackGarcia/challenge_numbers#readme",
+  "dependencies": {
+    "mocha": "^7.0.1"
+  }
+}

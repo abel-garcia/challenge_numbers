@@ -1,0 +1,9 @@
+version: '3'
+services:
+  music_battles:
+    container_name: music_battles
+    image: node:latest
+    volumes:
+      - .:/opt/app
+    working_dir: /opt/app
+    command: bash -c "npm install && npm test && node index.js"
