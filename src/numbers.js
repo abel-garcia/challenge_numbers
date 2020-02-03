@@ -1,17 +1,9 @@
-
  /**
   * Function decisde if num is divisible by div
-  * @param {number} num 
-  * @param {number} div 
+  * @param {number} x 
+  * @param {number} y 
   */
-var isDivOfN = (num, div) => num % div == 0;
-
-/**
- * Function delegate if is divisible by 3, 5 or both of them
- * @param {number} i 
- * @return string
- */
-var isDiv = (i) => isDivOfN(i, 3) && isDivOfN(i, 5)  ? "Musical" : isDivOfN(i, 3) ? "Music" : isDivOfN(i, 5) ? "TI" : i; 
+ var isDiv = (x, y) => x % y == 0;
 
 
 /**
@@ -19,10 +11,14 @@ var isDiv = (i) => isDivOfN(i, 3) && isDivOfN(i, 5)  ? "Musical" : isDivOfN(i, 3
  * @param {number} i 
  * @return number
  */
-var numbers = (i) => {
-    console.log(isDiv(i));
-    return i == 100 ? 0 : numbers(i+1);
-}
+
+const repeat = i => {
+  if(i === 101) return 0
+  console.log( ({true:"Musical"})[isDiv(i,3) && isDiv(i,5)]
+            || ({true:"Music"})[isDiv(i, 3)]
+            || ({true:"TI"})[isDiv(i, 5)] || i)
+  repeat(i+1)
+} 
 
 
-module.exports = () =>  numbers(1);
+module.exports = () =>  repeat(1);

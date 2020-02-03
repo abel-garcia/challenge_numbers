@@ -1,12 +1,12 @@
 const assert = require('assert');
-const numbers = require('../src/numbers')
+const repeat = require('../src/numbers')
 
 
 /**
  * basic test with mocha
  */
 describe("Numbers", function(){
-    it('numbers should return a number', function () {
-        assert.equal(numbers(),0)
+    it('numbers should return a null', function () {
+        assert.equal(repeat(),null)
     })
 })
